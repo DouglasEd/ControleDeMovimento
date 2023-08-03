@@ -20,17 +20,16 @@ def InfoArd():
         return [0,0]
     finally:
         sock.close()
-def Control():
-    if InfoArd[0] >= 300:
-        print("Baixo")
-        #Comando para Baixo
-    if InfoArd[0] <= -300:
-        print("Cima")
-        #Comando para Cima
-    if InfoArd[0] >= 300:
-        print('Esquerda')
-        #Comando para Esquerda
-    if InfoArd[0] <= -300:
-        print('direita')
-        #Comando para Direita
-#codigo
+
+if InfoArd[0] >= 300:
+    print("Baixo")
+    #Comando para Abaixar
+if InfoArd[0] <= -300 and InTheFloor:
+    print("Cima")
+    #Comando para Pular
+if InfoArd[1] <= -300:
+    print('direita')
+    #Comando para Soltar Fogo
+if InfoArd[1] >= 300:
+    print('Esquerda')
+    #Comando para ...
